@@ -1,3 +1,7 @@
+# 8.0.0
+
+- **[breaking]** support for multi-tab sessions
+
 # 7.0.1
 
 - fix time inputs capturing
