@@ -216,7 +216,7 @@ def get_raw_mob_by_id(project_id, session_id):
                                 detail=f"Replay file found under: {efs_path};" +
                                        " but it is not readable, please check permissions")
         # getsize return size in bytes, UNPROCESSED_MAX_SIZE is in Kb
-        if (getsize(path_to_file) / 1000) >= config("UNPROCESSED_MAX_SIZE", cast=int, default=200 * 1000):
+        if (getsize(path_to_file) / 1000) >= config("UNPROCESSED_MAX_SIZE", cast=int, default=200 * 1000) > 0:
             raise HTTPException(status_code=status.HTTP_413_REQUEST_ENTITY_TOO_LARGE, detail="Replay file too large")
         return path_to_file
 
