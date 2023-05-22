@@ -14,7 +14,7 @@ from chalicelib.core import log_tool_rollbar, sourcemaps, events, sessions_assig
     custom_metrics, saved_search, integrations_global, feature_flags
 from chalicelib.core.collaboration_msteams import MSTeams
 from chalicelib.core.collaboration_slack import Slack
-from chalicelib.utils import helper, captcha, s3
+from chalicelib.utils import helper, captcha
 from or_dependencies import OR_context
 from routers.base import get_routers
 
